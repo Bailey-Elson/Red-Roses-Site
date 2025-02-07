@@ -1,1 +1,7 @@
-<p>player-selector works!</p>
+<div class="player-selector text-center">
+    <div class="player-box row">
+        <div class="position-number col-2"><p>{{positionData.number}}</p></div>
+        <div class="position-name col-10" (click)="positionClicked()" *ngIf="positionData.name"><p>{{positionData.name}}</p></div>
+        <div class="position col-10" (click)="positionClicked()" *ngIf="!positionData.name"><p>{{positionData.position}}</p></div>
+    </div>
+</div>

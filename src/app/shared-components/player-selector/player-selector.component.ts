@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { PositionSelector } from "./../../models/team-selecor"
 
 @Component({
   selector: 'app-player-selector',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PlayerSelectorComponent implements OnInit {
 
+  @Input() positionData: PositionSelector;
+  @Output() positionSelected = new EventEmitter<PositionSelector>();
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit(): void {}
+
+  positionClicked () {
+    this.positionSelected.emit(this.positionData)
   }
 
 }

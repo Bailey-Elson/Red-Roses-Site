@@ -1,1 +1,8 @@
-<p>team-selector works!</p>
+<div class="page-container">
+    <h1 class="text-center mt-3">Team Selector</h1>
+    <div class="team-box">
+        <ng-container *ngFor="let position of teamsheet">
+            <app-player-selector [positionData]="position" (positionSelected)="positionSelected($event)"></app-player-selector>
+        </ng-container>
+    </div>
+</div>

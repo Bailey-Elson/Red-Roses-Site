@@ -19,7 +19,8 @@ import { PlayerSelectorComponent } from './player-selector/player-selector.compo
     FixturesComponent,
     PlayerProfileComponent,
     NavBarComponent,
-    FooterComponent
+    FooterComponent,
+    PlayerSelectorComponent
   ]
 })
 export class SharedComponentsModule { }
